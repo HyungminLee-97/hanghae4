@@ -8,12 +8,30 @@ body {
   background-color: hsl(0, 0%, 95%);
 }
 
-.profile {
-  width: 100px;
-  height: 100px;
+.profile1 {
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
-  border: 1px solid black;
-  background-image: url(images/profile-img.jpg);
+  border: 1px solid rgb(255, 255, 255);
+  background-image: url(/img/profile-img1.png);
+  background-position: center;
+  background-size: cover;
+}
+.profile2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1px solid rgb(255, 255, 255);
+  background-image: url(/img/profile-img2.png);
+  background-position: center;
+  background-size: cover;
+}
+.profile3 {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1px solid rgb(255, 255, 255);
+  background-image: url(/img/profile-img3.png);
   background-position: center;
   background-size: cover;
 }
@@ -63,9 +81,4 @@ body {
 
 .wrap > a:hover {
   background-color: #b6b6b6;
-}
-
-.team {
-  display: flex;
-  justify-content: center;
 }
