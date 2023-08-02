@@ -18,6 +18,16 @@ body {
   background-size: cover;
 }
 
+.profile1:hover {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1px solid rgb(255, 255, 255);
+  background-image: url(../img/profile-img1-1.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .profile2 {
   width: 150px;
   height: 150px;
@@ -28,12 +38,32 @@ body {
   background-size: cover;
 }
 
+.profile2:hover {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1px solid rgb(255, 255, 255);
+  background-image: url(../img/profile-img2-1.png);
+  background-position: center;
+  background-size: cover;
+}
+
 .profile3 {
   width: 150px;
   height: 150px;
   border-radius: 100%;
   border: 1px solid rgb(255, 255, 255);
   background-image: url(../img/profile-img3.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.profile3:hover {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1px solid rgb(255, 255, 255);
+  background-image: url(../img/profile-img3-1.png);
   background-position: center;
   background-size: cover;
 }
