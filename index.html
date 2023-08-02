@@ -1,91 +1,105 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Hanghae4 Not Found" />
-    <meta property="og:description" content="항해99 프리코스 1기 4조 입니다." />
-    <meta property="og:image" content="images/profile-img.jpg" />
-    <title>hanghae4 Not Found</title>
-    <style>
-      @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+<html lang="ko">
 
-      * {
-        font-family: "Pretendard", serif;
-      }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanghae4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="shortcut icon" href="images/logo.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/main.js" defer></script>
+</head>
 
-      body {
-        background-color: hsl(0, 0%, 95%);
-      }
+<body>
 
-      .profile {
-        width: 100px;
-        height: 100px;
-        border-radius: 100%;
-        border: 1px solid black;
-        background-image: url(images/profile-img.jpg);
-        background-position: center;
-        background-size: cover;
-      }
+    <div class="container">
+        <!--nav바-->
+        <nav>
+            <ul>
+                <a href="index.html"><img src="images/logo.png" style="max-width:125px; height:auto;"></a>
+            </ul>
+        </nav>
+        <!--nav바 끝-->
 
-      .main {
-        color: #000000;
-        font-size: 18px;
-        size: 20px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-      }
-
-      .sub {
-        color: #000000;
-        font-size: 14px;
-        font-weight: 400;
-        size: 14px;
-        margin-top: 0px;
-        margin-bottom: 30px;
-      }
-
-      .wrap {
-        width: 300px;
-        margin: 30px auto 0px auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .wrap > a {
-        width: 320px;
-        height: 59px;
-        border-radius: 16px;
-        background-color: white;
-        margin-bottom: 16px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #000000;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        border: 1px solid #353432;
-      }
-
-      .wrap > a:hover {
-        background-color: #b6b6b6;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="wrap">
-      <div class="profile"></div>
-      <h1 class="main">4조 입니다.</h1>
-      <p class="sub">node.js</p>
-      <a target="_blank" href="https://naver.com/">팀원1 블로그</a>
-      <a target="_blank" href="">팀원2 블로그</a>
-      <a target="_blank" href="">팀원3 블로그</a>
+        <!--엘리먼트1-->
+        <article>
+            <h1>Hanghae4 Not Found</h1>
+            <h7>The page you are looking for may have been moved</h7>
+            <div class="grid">
+                <img src="images/main1.png" style="max-width:100%; height:auto;"></a>
+            </div>
+        </article>
+        <!--엘리먼트1 끝-->
     </div>
-  </body>
+
+    <!--팀원 목록-->
+    <div class ="team">
+    <!--팀원 소개 페이지1-->
+
+        <article>
+            <div class="wrap">
+                <div class="profile"></div>
+                <h1 class="main">팀장: 서주혜</h1>
+                <p class="sub">팀 약속 :잘해봅시다.</p>
+                <a target="_blank" href="https://naver.com/">블로그</a>
+              </div>
+        </article>
+
+    <!--팀원 소개 페이지1-->
+
+    <!--팀원 소개 페이지2-->
+
+        <article>
+            <div class="wrap">
+                <div class="profile"></div>
+                <h1 class="main">팀원: 이형민</h1>
+                <p class="sub">팀 약속 :잘해봅시다.</p>
+                <a target="_blank" href="https://velog.io/@97hmlee">블로그</a>
+              </div>
+        </article>
+
+    <!--팀원 소개 페이지2-->
+
+    <!--팀원 소개 페이지3-->
+
+        <article>
+            <div class="wrap">
+                <div class="profile"></div>
+                <h1 class="main">팀원: 오윤성</h1>
+                <p class="sub">팀 약속: 잘해봅시다.</p>
+                <a target="_blank" href="https://naver.com">블로그</a>
+              </div>
+        </article>
+
+    <!--팀원 소개 페이지3-->
+    </div>
+    <!--팀원 목록-->
+
+    <!-- 댓글 -->
+    <section aria-label="Subscribe example">
+        <div class="container">
+            <div class="promote">
+                <article>
+                    <hgroup>
+                        <h2>방명록</h2>
+                        <h3>Hanghae4 Not Found에게 응원의 한마디를 남겨주세요.</h3>
+                    </hgroup>
+
+                    <div class="comments-receive">
+                        <form class="grid">
+                            <input type="text" id="name" name="name" placeholder="이름" aria-label="name" required />
+                            <input type="email" id="comments" name="comments" placeholder="댓글" aria-label="comments"
+                                required />
+                            <button type="submit" id="send" onclick="event.preventDefault()">댓글 작성하기</button>
+                        </form>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+</body>
+
 </html>

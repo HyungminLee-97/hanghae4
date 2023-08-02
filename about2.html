@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="던라이큰" />
+    <meta property="og:description" content="던라이큰 서비스" />
+    <meta property="og:image" content="img/logo.png" />
+    <title>던라이큰(dawnLiken)</title>
+    <style>
+      @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+      * {
+        font-family: "Pretendard", serif;
+      }
+
+      body {
+        background: linear-gradient(180deg, #fffcfd 0%, #ffe2e8 100%);
+        height: 100vh;
+      }
+
+      .profile {
+        width: 100px;
+        height: 100px;
+
+        background-color: #eceef7;
+        border-radius: 100%;
+
+        border: 2px solid #f5f7fa;
+
+        background-image: url(img/logo.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+
+      .main {
+        color: #000000;
+        font-size: 22px;
+        size: 20px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+
+      .sub {
+        color: #000000;
+        font-size: 14px;
+        font-weight: 400;
+        size: 14px;
+        margin-top: 0px;
+        margin-bottom: 30px;
+      }
+
+      .wrap {
+        width: 300px;
+        margin: 30px auto 0px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bigbutton {
+        width: 320px;
+        height: 59px;
+        border-radius: 8px;
+        background-color: white;
+        margin-bottom: 16px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #000000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        box-shadow: 0px 4px 16px rgba(232, 52, 78, 0.2);
+      }
+
+      .buttons > a {
+        width: 152px;
+        height: 59px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: bold;
+        color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        box-shadow: 0px 4px 16px rgba(232, 52, 78, 0.2);
+        margin: 0px 8px 17px 8px;
+      }
+
+      .service1 {
+        background-color: #bfb5d7;
+      }
+
+      .service2 {
+        background-color: #facac0;
+      }
+
+      .service3 {
+        background-color: #f3c9dd;
+      }
+
+      .service4 {
+        background-color: #bea1a5;
+      }
+
+      .service5 {
+        background-color: #b7e3e4;
+      }
+
+      .service6 {
+        background-color: #ffeb91;
+      }
+
+      .buttons {
+        display: flex;
+      }
+
+      .wrap > a:hover {
+        background-color: #f2f2f2;
+        font-size: 14.5px;
+      }
+
+      .buttons > a:hover {
+        background-color: #949494;
+        font-size: 15.5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyD7raDFOgkLdM8O6r6GzdPZ7gDT50Y3h2o",
+        authDomain: "dawnliken-19d3c.firebaseapp.com",
+        projectId: "dawnliken-19d3c",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <div class="wrap">
+      <div class="profile"></div>
+      <h1 class="main">던라이큰(dawnLiken)</h1>
+      <p class="sub">던라이큰에서 제공하는 서비스를 아래에서 만나보세요.</p>
+      <a
+        class="bigbutton"
+        target="_blank"
+        href="https://spartacodingclub.kr/community/blog/hanghae99-dobrain-interview"
+        >🌕 던라이큰 조직 구조
+      </a>
+      <a class="bigbutton" target="_blank" href="https://youtu.be/pV5OlyZoRb0"
+        >🔴 던라이큰이 만들고 싶은 세상에 대하여</a
+      >
+      <div class="buttons">
+        <a class="service1" target="_blank" href="https://stockbgm.com"
+          >스톡비잼</a
+        >
+        <a class="service2" target="_blank" href="https://table-hero.com"
+          >테이블 히어로</a
+        >
+      </div>
+      <div class="buttons">
+        <a class="service3" target="_blank" href="https://srpofficial.co.kr"
+          >SRP</a
+        >
+        <a class="service4" target="_blank" href="">셀프결제(예정)</a>
+      </div>
+      <div class="buttons">
+        <a class="service5" target="_blank" href="">비고</a>
+        <a class="service6" target="_blank" href="">비고</a>
+      </div>
+    </div>
+  </body>
+</html>
