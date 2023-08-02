@@ -86,7 +86,7 @@ body {
 }
 
 .wrap {
-  width: 150px;
+  width: 300px;
   margin: 30px auto 0px auto;
   display: flex;
   flex-direction: column;
@@ -116,4 +116,8 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: #000000;
+}
+
+.character {
+  font-weight:bold;
 }
