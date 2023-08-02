@@ -86,7 +86,7 @@ body {
 }
 
 .wrap {
-  width: 150px;
+  width: 300px;
   margin: 30px auto 0px auto;
   display: flex;
   flex-direction: column;
@@ -95,7 +95,7 @@ body {
 }
 
 .wrap > a {
-  width: 150px;
+  width: 300px;
   height: 59px;
   border-radius: 16px;
   background-color: white;
