@@ -10,6 +10,8 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
+// index 페이지 css 적용
+
 // 서주헤 profile about1
 app.get("/about1", function (req, res) {
   res.sendFile(__dirname + "/about1.html");
