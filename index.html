@@ -15,7 +15,35 @@
     />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/main.js" defer></script>
+  
+  <style>
+    .container {
+      text-align: center;
+      margin: 100px 0;
+    }
+
+    .title {
+      color: black;
+      font-size: 24px;
+    }
+
+    .minititle {
+      color: black;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      background-color: transparent;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      padding: 10px;
+      margin: 100px 0;
+    }
+  </style>
+  
+  
+  
   </head>
+
+
 
   <body>
     <div class="container">
@@ -45,8 +73,8 @@
           <div class="wrap">
             <div class="profile1"></div>
             <h1 class="main">팀장: 서주혜</h1>
-            <p class="sub">팀 약속 :잘해봅시다.</p>
-            <a target="_blank" href="about1.html">더 보기</a>
+            <p class="sub">팀 약속 :잘해봅시다</p>
+            <input type="button" value="SEE MORE" onclick="showPopup1();">  
           </div>
         </article>
         <!--팀원 소개 페이지1-->
@@ -57,7 +85,7 @@
             <div class="profile2"></div>
             <h1 class="main">팀원: 이형민</h1>
             <p class="sub">팀 약속 :잘해봅시다.</p>
-            <a target="_blank" href="about2.html">더 보기</a>
+            <input type="button" value="SEE MORE" onclick="showPopup2();">  
           </div>
         </article>
         <!--팀원 소개 페이지2-->
@@ -68,7 +96,7 @@
             <div class="profile3"></div>
             <h1 class="main">팀원: 오윤성</h1>
             <p class="sub">팀 약속: 잘해봅시다.</p>
-            <a target="_blank" href="about3.html">더 보기</a>
+            <input type="button" value="SEE MORE" onclick="showPopup3();">  
           </div>
         </article>
         <!--팀원 소개 페이지3-->
