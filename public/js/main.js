@@ -12,14 +12,26 @@ $("#send").click(function () {
     });
 });
 
-function showPopup1() {
-  window.open("./about1.html","INTRODUCE MYSELF", "width=500, height=500, left=100, top=50")
-}
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+  };
 
-function showPopup2() {
-  window.open("./about2.html","INTRODUCE MYSELF", "width=500, height=500, left=100, top=50")
-}
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+  };
 
-function showPopup3() {
-  window.open("./about3.html","INTRODUCE MYSELF", "width=500, height=500, left=100, top=50")
-}
+function openModal2() {
+  document.getElementById("myModal2").style.display = "block";
+  };
+
+function closeModal2() {
+  document.getElementById("myModal2").style.display = "none";
+  };
+  
+function openModal3() {
+  document.getElementById("myModal3").style.display = "block";
+  };
+
+function closeModal3() {
+  document.getElementById("myModal3").style.display = "none";
+  };
