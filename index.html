@@ -15,29 +15,7 @@
     />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/main.js" defer></script>
-  
-  <style>
-    .container {
-      text-align: center;
-      margin: 100px 0;
-    }
 
-    .title {
-      color: black;
-      font-size: 24px;
-    }
-
-    .minititle {
-      color: black;
-      line-height: 1.5;
-      white-space: pre-wrap;
-      background-color: transparent;
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
-      padding: 10px;
-      margin: 100px 0;
-    }
-  </style>
   
   
   
@@ -73,8 +51,15 @@
           <div class="wrap">
             <div class="profile1"></div>
             <h1 class="main">팀장: 서주혜</h1>
-            <p class="sub">팀 약속 :잘해봅시다</p>
-            <input type="button" value="SEE MORE" onclick="showPopup1();">  
+            <p class="sub">팀 약속 :잘해봅시다</p> 
+            <button onclick="openModal()">SEE MORE</button>
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <iframe src='./about1.html'></iframe>
+                <span onclick="closeModal()">&times;</span>
+              </div>
+            </div>
+              
           </div>
         </article>
         <!--팀원 소개 페이지1-->
@@ -85,7 +70,12 @@
             <div class="profile2"></div>
             <h1 class="main">팀원: 이형민</h1>
             <p class="sub">팀 약속 :잘해봅시다.</p>
-            <input type="button" value="SEE MORE" onclick="showPopup2();">  
+            <button onclick="openModal2()">SEE MORE</button>
+            <div id="myModal2" class="modal">
+              <div class="modal-content">
+                <iframe src='./about2.html'></iframe>
+                <span onclick="closeModal2()">&times;</span>
+              </div>             
           </div>
         </article>
         <!--팀원 소개 페이지2-->
@@ -96,7 +86,12 @@
             <div class="profile3"></div>
             <h1 class="main">팀원: 오윤성</h1>
             <p class="sub">팀 약속: 잘해봅시다.</p>
-            <input type="button" value="SEE MORE" onclick="showPopup3();">  
+            <button onclick="openModal3()">SEE MORE</button>
+            <div id="myModal3" class="modal">
+              <div class="modal-content">
+                <iframe src='./about3.html'></iframe>
+                <span onclick="closeModal3()">&times;</span>
+              </div>  
           </div>
         </article>
         <!--팀원 소개 페이지3-->
