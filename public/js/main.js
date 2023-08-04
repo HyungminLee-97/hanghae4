@@ -2,8 +2,8 @@
 $("#send").click(function () {
   var form = {
     name: $("#name").val(),
-    comments: $("#comments").val(),
     password: $("#pwd").val(),
+    comments: $("#comments").val(),
     date: new Date(),
   };
   db.collection("email-received")
