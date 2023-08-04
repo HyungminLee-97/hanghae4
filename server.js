@@ -15,10 +15,6 @@ MongoClient.connect(
     //mongodb 내에 hanghae4라는 databse 폴더에 연결
     db = client.db("hanghae4");
 
-    // db.collection('post').insertOne({이름: . }, function(error, result){
-    //   console.log('작성 완료')
-    // });
-
     //서버띄우는 코드
     app.listen(3000, function () {
       console.log("3000번 포트가 열림");
@@ -40,14 +36,20 @@ app.get("/:id", function (req, res) {
 
 //방명록 작성
 app.post("/add", function (req, res) {
-  res.send("댓글이 작성되었습니다.");
-  console.log(req.body);
+  // 댓글 저장
   db.collection("post").insertOne(
-    { 이름: req.body.name, 댓글: req.body.comment, 암호: req.body.password },
+    {
+      이름: req.body.name,
+      댓글: req.body.comment,
+      암호: req.body.password,
+    },
     function (error, result) {
       console.log("댓글 작성 완료");
     }
   );
+  // 작성 완료 alert 후, index 페이지로 리디렉션
+  res.write("<script>alert('Success')</script>");
+  res.write('<script>window.location="/"</script>');
 });
 
 //css,img,js 적용
