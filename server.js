@@ -12,10 +12,9 @@ app.get("/", function (req, res) {
 
 // 팀 멤버 1,2,3 profile 조회
 app.get("/data/:id", function (req, res) {
-  const {id} = req.params;
+  const { id } = req.params;
   res.sendFile(__dirname + `/${id}.html`);
 });
 
-
 //css,img,js 적용
-app.use('/static',express.static("public"));
+app.use("/public", express.static("public"));
