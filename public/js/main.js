@@ -2,6 +2,7 @@
 $("#send").click(function () {
   var form = {
     name: $("#name").val(),
+    password: $("#pwd").val(),
     comments: $("#comments").val(),
     date: new Date(),
   };
