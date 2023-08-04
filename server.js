@@ -10,20 +10,12 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
-// 서주헤 profile about1
-app.get("/about1", function (req, res) {
-  res.sendFile(__dirname + "/about1.html");
+// 팀 멤버 1,2,3 profile 조회
+app.get("/data/:id", function (req, res) {
+  const {id} = req.params;
+  res.sendFile(__dirname + `/${id}.html`);
 });
 
-// 이형민 profile about2
-app.get("/about2", function (req, res) {
-  res.sendFile(__dirname + "/about2.html");
-});
-
-// 오윤성 profile about3
-app.get("/about3", function (req, res) {
-  res.sendFile(__dirname + "/about3.html");
-});
 
 //css,img,js 적용
-app.use(express.static("public"));
+app.use('/static',express.static("public"));
