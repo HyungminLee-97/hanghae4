@@ -18,4 +18,4 @@ app.get("/data/:id", function (req, res) {
 
 
 //css,img,js 적용
-app.use('/static',express.static("public"));
+app.use(express.static("public"));
