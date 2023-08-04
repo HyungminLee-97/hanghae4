@@ -29,7 +29,6 @@ app.get("/", function (req, res) {
 // 팀 멤버 1,2,3 profile 조회
 app.get("/:id", function (req, res) {
   const { id } = req.params;
-  console.log(id);
   res.sendFile(__dirname + `/${id}`);
 });
 
@@ -50,6 +49,7 @@ app.post("/add", function (req, res) {
   res.write("<script>alert('Success')</script>");
   res.write('<script>window.location="/"</script>');
 });
+
 
 //css,img,js 적용
 app.use("/public", express.static("public"));
