@@ -1,4 +1,5 @@
 const express = require("express");
+const fs = require('fs');
 const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -13,9 +14,10 @@ app.get("/", function (req, res) {
 });
 
 // 팀 멤버 1,2,3 profile 조회
-app.get("/data/:id", function (req, res) {
+app.get("/:id", function (req, res) {
   const { id } = req.params;
-  res.sendFile(__dirname + `/${id}.html`);
+  console.log(id);
+  res.sendFile(__dirname + `/${id}`);
 });
 
 //방명록 작성
