@@ -3,7 +3,6 @@ const fs = require("fs");
 const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
-
 const MongoClient = require("mongodb").MongoClient;
 
 var db;
@@ -12,7 +11,7 @@ MongoClient.connect(
   function (error, client) {
     if (error) return console.log(error);
 
-    //mongodb 내에 hanghae4라는 databse 폴더에 연결
+    //mongodb 내에 hanghae4라는 database 폴더에 연결
     db = client.db("hanghae4");
 
     //서버띄우는 코드
