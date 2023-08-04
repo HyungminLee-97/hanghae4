@@ -14,7 +14,7 @@ $("#send").click(function () {
 });
 
 function openModal() {
-  document.getElementById("myModal").style.display = "block";
+  document.getElementById("myModal").style.display = "block";      
   };
 
 function closeModal() {
@@ -36,3 +36,4 @@ function openModal3() {
 function closeModal3() {
   document.getElementById("myModal3").style.display = "none";
   };
+
