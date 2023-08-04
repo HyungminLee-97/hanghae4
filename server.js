@@ -1,17 +1,7 @@
 const express = require("express");
 const app = express();
-const MongoClient = require("mongodb").MongoClient;
-app.use(express.urlencoded({ extended: true }));
-
-MongoClient.connect(
-  "mongodb+srv://admin:qwer1234@cluster0.gq7c239.mongodb.net/?retryWrites=true&w=majority",
-  function (err, client) {
-    if (err) return console.log(err);
-    app.listen(3000, function () {
-      console.log("3000번 포트가 열림");
-    });
-  }
-);
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(3000, function () {
   console.log("3000번 포트가 열림");

@@ -154,7 +154,7 @@
           <h3>Hanghae4 Not Found에게 응원의 한마디를 남겨주세요.</h3>
         </hgroup>
 
-        <form action="add" method="POST">
+        <form action="/add" method="POST">
           <div class="form-group">
             <label>이름</label>
             <input type="text" class="form-control" name="name" />
@@ -162,6 +162,10 @@
           <div class="form-group">
             <label>댓글</label>
             <input type="text" class="form-control" name="comment" />
+          </div>
+          <div class="form-group">
+            <label>비밀번호</label>
+            <input type="password" class="form-control" name="password" />
           </div>
           <button type="submit" class="btn">댓글 남기기</button>
         </form>
