@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 const MongoClient = require("mongodb").MongoClient;
+app.set("view engine", "ejs");
 
 var db;
 MongoClient.connect(
@@ -49,6 +50,11 @@ app.post("/add", function (req, res) {
   // 작성 완료 alert 후, index 페이지로 리디렉션
   res.write("<script>alert('Success')</script>");
   res.write('<script>window.location="/"</script>');
+});
+
+// db에 저장된 댓글 데이터 list.html로 불러오기
+app.get("/list", function (req, res) {
+  res.render("list.ejs");
 });
 
 //css,img,js 적용
