@@ -33,7 +33,7 @@
       <!--엘리먼트1-->
       <article data-theme="light">
         <h1>Hanghae4 Not Found</h1>
-        <h6>The page you are looking for may have been moved</h6>
+        <h6>The Hanghae4 you are looking for is here.</h6>
       </article>
       <!--엘리먼트1 끝-->
 
@@ -84,7 +84,7 @@
           <div class="wrap">
             <div class="profile2"></div>
             <h1 class="main">팀원: 이형민</h1>
-            <p class="sub">팀 약속: 잘해봅시다.</p>
+            <p class="sub">나는 누구, 여긴 어디?</p>
             <button onclick="openModal2()">SEE MORE</button>
             <div id="myModal2" class="modal">
               <div class="modal-content">
@@ -147,56 +147,29 @@
     <!--팀원 목록-->
 
     <!-- 댓글 -->
-    <section aria-label="Subscribe example">
-      <div class="container">
-        <div class="promote">
-          <article data-theme="light">
-            <hgroup>
-              <h2>방명록</h2>
-              <h3>Hanghae4 Not Found에게 응원의 한마디를 남겨주세요.</h3>
-            </hgroup>
+    <div class="container">
+      <article data-theme="light">
+        <hgroup>
+          <h2>방명록</h2>
+          <h3>Hanghae4 Not Found에게 응원의 한마디를 남겨주세요.</h3>
+        </hgroup>
 
-            <div class="comments-receive">
-              <form class="grid">
-                <!--이름-->
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="이름"
-                  aria-label="name"
-                  required
-                />
-                <!--비밀번호-->
-                <input
-                  type="password"
-                  id="pwd"
-                  name="pwd"
-                  placeholder="비밀번호를 설정해주세요"
-                  aria-label="pwd"
-                  required
-                />
-                <!--내용-->
-                <input
-                  type="email"
-                  id="comments"
-                  name="comments"
-                  placeholder="댓글"
-                  aria-label="comments"
-                  required
-                />
-                <button
-                  type="submit"
-                  id="send"
-                  onclick="event.preventDefault()"
-                >
-                  댓글 작성하기
-                </button>
-              </form>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+        <form action="/add" method="POST">
+          <div class="form-group">
+            <label>이름</label>
+            <input type="text" class="form-control" name="name" />
+          </div>
+          <div class="form-group">
+            <label>댓글</label>
+            <input type="text" class="form-control" name="comment" />
+          </div>
+          <div class="form-group">
+            <label>비밀번호</label>
+            <input type="password" class="form-control" name="password" />
+          </div>
+          <button type="submit" class="btn">댓글 남기기</button>
+        </form>
+      </article>
+    </div>
   </body>
 </html>
