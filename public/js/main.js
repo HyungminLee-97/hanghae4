@@ -14,26 +14,56 @@ $("#send").click(function () {
 });
 
 function openModal() {
-  document.getElementById("myModal").style.display = "block";      
-  };
+  document.getElementById("myModal").style.display = "block";
+}
 
 function closeModal() {
   document.getElementById("myModal").style.display = "none";
-  };
+}
 
 function openModal2() {
   document.getElementById("myModal2").style.display = "block";
-  };
+}
 
 function closeModal2() {
   document.getElementById("myModal2").style.display = "none";
-  };
-  
+}
+
 function openModal3() {
   document.getElementById("myModal3").style.display = "block";
-  };
+}
 
 function closeModal3() {
   document.getElementById("myModal3").style.display = "none";
-  };
+}
 
+document.getElementById("f").onsubmit = function () {
+  var name = document.getElementById("name").value;
+  var content = document.getElementById("content").value;
+
+  document.getElementById("result").textContent = name + ":" + content;
+};
+
+//댓글 출력
+
+// form.addEventListener('submit', function(e) {
+//   e.preventDefault();
+
+//   var name = document.getElementById('name').value;
+//   var content = document.getElementById('content').value;
+
+//   var node = document.createElement('li')
+//   var textnode = name + ':' + content;
+//   node.appendChild(textnode);
+//   document.getElementsByTagName('txt').appendChild(node)
+//  })
+
+// function append() {
+//   var name = document.getElementById('name').value;
+//   var content = document.getElementById('content').value;
+
+//   var node = document.createElement('li')
+//   var textnode = name + ':' + content;
+//   node.appendChild(textnode);
+//   document.getElementsByTagName('txt').appendChild(node)
+// }
