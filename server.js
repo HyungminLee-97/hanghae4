@@ -2,8 +2,11 @@ const express = require("express");
 const fs = require("fs");
 const app = express();
 const bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({ extended: true }));
 const MongoClient = require("mongodb").MongoClient;
+
+
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 var db;
 MongoClient.connect(
@@ -20,6 +23,12 @@ MongoClient.connect(
     });
   }
 );
+
+app.get("/comment", async (req, res) => {
+  let dbRes = await db.collection("post").find({}).toArray();
+  console.log(dbRes);
+  return res.json(dbRes);
+})
 
 // index 페이지 출력
 app.get("/", function (req, res) {
@@ -49,6 +58,8 @@ app.post("/add", function (req, res) {
   res.write("<script>alert('Success')</script>");
   res.write('<script>window.location="/"</script>');
 });
+
+
 
 //방명록 html 출력
 

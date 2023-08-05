@@ -13,6 +13,8 @@ $("#send").click(function () {
     });
 });
 
+window.onload = getCommnet();
+
 function openModal() {
   document.getElementById("myModal").style.display = "block";
 }
@@ -37,6 +39,44 @@ function closeModal3() {
   document.getElementById("myModal3").style.display = "none";
 }
 
+function getCommnet() {
+
+  // 기존에 있는 방명록 목록을 비워준다.
+  $('#comment-list').empty();
+
+  $.ajax({
+    type: 'GET',
+    url: '/comment',
+    success: function (response) {
+
+      for (let comment of response) {
+        let html = genCardHtml(comment);
+        $('#comment-list').append(html);
+      }
+    }
+  });
+}
+
+function genCardHtml(commnet) {
+  let name = commnet['이름'];
+  let content = commnet['댓글'];
+
+  if(name =="") return;
+
+  let html = `
+      <div class="comment-card">
+          <div class="comment-content">
+            <div><span class="comment-name">${name}</span></div>
+            <div>${content}</div>
+          </div>
+        </div>
+      <hr>
+    `;
+
+  return html;
+}
+
+
 document.getElementById("f").onsubmit = function () {
   var name = document.getElementById("name").value;
   var content = document.getElementById("content").value;
@@ -44,26 +84,3 @@ document.getElementById("f").onsubmit = function () {
   document.getElementById("result").textContent = name + ":" + content;
 };
 
-//댓글 출력
-
-// form.addEventListener('submit', function(e) {
-//   e.preventDefault();
-
-//   var name = document.getElementById('name').value;
-//   var content = document.getElementById('content').value;
-
-//   var node = document.createElement('li')
-//   var textnode = name + ':' + content;
-//   node.appendChild(textnode);
-//   document.getElementsByTagName('txt').appendChild(node)
-//  })
-
-// function append() {
-//   var name = document.getElementById('name').value;
-//   var content = document.getElementById('content').value;
-
-//   var node = document.createElement('li')
-//   var textnode = name + ':' + content;
-//   node.appendChild(textnode);
-//   document.getElementsByTagName('txt').appendChild(node)
-// }

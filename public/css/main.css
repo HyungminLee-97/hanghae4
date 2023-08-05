@@ -143,3 +143,33 @@ body {
   padding: 10px;
   overflow: hidden;
 }
+
+.comment-card {
+  /* display: flex; */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+
+}
+
+.comment-content {
+  justify-content: space-around;
+  display: flex;
+}
+
+.name {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.comment {
+  margin: 0;
+}
+
+.comment-name {
+  font-size: 20;
+  font-weight: bold;
+
+}
