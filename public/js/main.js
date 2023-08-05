@@ -40,28 +40,26 @@ function closeModal3() {
 }
 
 function getCommnet() {
-
   // 기존에 있는 방명록 목록을 비워준다.
-  $('#comment-list').empty();
+  $("#comment-list").empty();
 
   $.ajax({
-    type: 'GET',
-    url: '/comment',
+    type: "GET",
+    url: "/comment",
     success: function (response) {
-
       for (let comment of response) {
         let html = genCardHtml(comment);
-        $('#comment-list').append(html);
+        $("#comment-list").append(html);
       }
-    }
+    },
   });
 }
 
 function genCardHtml(commnet) {
-  let name = commnet['이름'];
-  let content = commnet['댓글'];
+  let name = commnet["이름"];
+  let content = commnet["댓글"];
 
-  if(name =="") return;
+  if (name == "") return;
 
   let html = `
       <div class="comment-card">
@@ -76,11 +74,9 @@ function genCardHtml(commnet) {
   return html;
 }
 
-
 document.getElementById("f").onsubmit = function () {
   var name = document.getElementById("name").value;
   var content = document.getElementById("content").value;
 
   document.getElementById("result").textContent = name + ":" + content;
 };
-
