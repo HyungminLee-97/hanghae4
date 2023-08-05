@@ -37,3 +37,35 @@ function closeModal3() {
   document.getElementById("myModal3").style.display = "none";
   };
 
+
+document.getElementById('f').onsubmit = function () {
+  var name = document.getElementById('name').value;
+  var content = document.getElementById('content').value;
+
+  document.getElementById("result").textContent = name + ':' + content;
+}
+
+
+
+// form.addEventListener('submit', function(e) {
+//   e.preventDefault();
+  
+//   var name = document.getElementById('name').value;
+//   var content = document.getElementById('content').value;
+
+//   var node = document.createElement('li')
+//   var textnode = name + ':' + content;
+//   node.appendChild(textnode);
+//   document.getElementsByTagName('txt').appendChild(node)
+//  })
+
+
+ // function append() {
+//   var name = document.getElementById('name').value;
+//   var content = document.getElementById('content').value;
+
+//   var node = document.createElement('li')
+//   var textnode = name + ':' + content;
+//   node.appendChild(textnode);
+//   document.getElementsByTagName('txt').appendChild(node)
+// }
