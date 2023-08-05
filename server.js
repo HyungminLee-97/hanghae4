@@ -50,10 +50,7 @@ app.post("/add", function (req, res) {
   res.write('<script>window.location="/"</script>');
 });
 
-// /list로 GET 요청 하면, 데이터 html 출력
-app.get("/list", function (req, res) {
-  res.render("list.ejs");
-});
+//방명록 html 출력
 
 //css,img,js 적용
 app.use("/public", express.static("public"));
